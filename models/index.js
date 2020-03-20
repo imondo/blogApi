@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const config = require('./../config/defalut');
+const config = require('../config');
 const connection = mysql.createConnection(config);
 connection.connect();
 
@@ -7,7 +7,6 @@ const query = function( sql, values ) {
   return new Promise(( resolve, reject ) => {
     connection.query(sql, values, function(err, rows) {
       if (err) {
-        console.log(err);
         reject(err);
       } else {
         resolve(rows);

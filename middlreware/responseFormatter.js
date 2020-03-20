@@ -7,6 +7,7 @@ const responseFormatter = async (ctx, next) => {
       data: ctx.body
     }
   } else {
+    console.log(err);
     ctx.throw(500, '操作失败');
   }
 }
