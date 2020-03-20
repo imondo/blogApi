@@ -1,6 +1,6 @@
 [{
   "name": "vue-koa",
-  "script": "./server/app.js",
+  "script": "./app.js",
   "env_dev": {
     "NODE_ENV": "development"
   },
